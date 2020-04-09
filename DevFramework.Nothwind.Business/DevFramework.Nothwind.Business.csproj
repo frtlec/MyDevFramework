@@ -41,7 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Concrete\Managers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevFramework.Northwind.Entities\DevFramework.Northwind.Entities.csproj">
+      <Project>{2DEC74F2-5C92-4953-9AC3-48BE893F8E21}</Project>
+      <Name>DevFramework.Northwind.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

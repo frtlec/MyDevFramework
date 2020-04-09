@@ -1,5 +1,4 @@
 ﻿using DevFramework.Core.Entities;
-using NHibernate.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
