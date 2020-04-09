@@ -97,10 +97,6 @@
       <Project>{27A8FC07-B7EA-40ED-8EDF-DCF61FE2D0AA}</Project>
       <Name>DevFramework.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DevFramework.Northwind.Business.Test\DevFramework.Northwind.Business.Test.csproj">
-      <Project>{25d63ad6-f084-49f6-9f66-617230f30a89}</Project>
-      <Name>DevFramework.Northwind.Business.Test</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DevFramework.Northwind.Entities\DevFramework.Northwind.Entities.csproj">
       <Project>{2DEC74F2-5C92-4953-9AC3-48BE893F8E21}</Project>
       <Name>DevFramework.Northwind.Entities</Name>
