@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.DataAccess", "DevFramework.Northwind.DataAccess\DevFramework.Northwind.DataAccess.csproj", "{655FCB7D-46D6-4DA6-89AB-777E31917E36}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DevFramework.Northwind.MvcWebUI", "DevFramework.Northwind.MvcWebUI\DevFramework.Northwind.MvcWebUI.vbproj", "{43DADBC5-6E1E-4B74-9988-E303FF50D447}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.MvcWebUI.Tests", "DevFramework.Northwind.MvcWebUI.Tests\DevFramework.Northwind.MvcWebUI.Tests.csproj", "{7653865E-E7CD-456A-BFB0-3B5D42E91090}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.DataAccess.Test", "DevFramework.DataAccess.Test\DevFramework.DataAccess.Test.csproj", "{6B46C36A-9203-49F8-8061-BB6E94369D82}"
@@ -20,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.WebApi", "DevFramework.Northwind.WebApi\DevFramework.Northwind.WebApi.csproj", "{41542DF0-4D34-4B1D-8895-1C11BF25AD0D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.WcfService", "DevFramework.Northwind.WcfService\DevFramework.Northwind.WcfService.csproj", "{E2CAEBDA-195A-4C76-9A84-775AEFEEBDC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFramework.Northwind.Business", "DevFramework.Northwind.Business\DevFramework.Northwind.Business.csproj", "{DC36E464-FC02-4B19-88B2-74F71AF25E69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.MvcWebUI2", "DevFramework.Northwind.MvcWebUI2\DevFramework.Northwind.MvcWebUI2.csproj", "{E55F3614-C6CF-476A-887B-72B0D6F14A51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +41,6 @@ Global
 		{655FCB7D-46D6-4DA6-89AB-777E31917E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{655FCB7D-46D6-4DA6-89AB-777E31917E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{655FCB7D-46D6-4DA6-89AB-777E31917E36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43DADBC5-6E1E-4B74-9988-E303FF50D447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43DADBC5-6E1E-4B74-9988-E303FF50D447}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43DADBC5-6E1E-4B74-9988-E303FF50D447}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43DADBC5-6E1E-4B74-9988-E303FF50D447}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7653865E-E7CD-456A-BFB0-3B5D42E91090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7653865E-E7CD-456A-BFB0-3B5D42E91090}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7653865E-E7CD-456A-BFB0-3B5D42E91090}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +61,14 @@ Global
 		{E2CAEBDA-195A-4C76-9A84-775AEFEEBDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2CAEBDA-195A-4C76-9A84-775AEFEEBDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2CAEBDA-195A-4C76-9A84-775AEFEEBDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC36E464-FC02-4B19-88B2-74F71AF25E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC36E464-FC02-4B19-88B2-74F71AF25E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC36E464-FC02-4B19-88B2-74F71AF25E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC36E464-FC02-4B19-88B2-74F71AF25E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E55F3614-C6CF-476A-887B-72B0D6F14A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E55F3614-C6CF-476A-887B-72B0D6F14A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E55F3614-C6CF-476A-887B-72B0D6F14A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E55F3614-C6CF-476A-887B-72B0D6F14A51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

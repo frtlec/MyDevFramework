@@ -14,9 +14,9 @@ namespace DevFramework.Northwind.DataAccess.Concrete.NHibernate.Mappings
         {
             Table(@"Products");
             LazyLoad();
-            Id(x => x.ProductID).Column("ProductID");
+            Id(x => x.ProductId).Column("ProductID");
 
-            Map(x => x.CategoryID).Column("CategoryID");
+            Map(x => x.CategoryId).Column("CategoryID");
             Map(x => x.ProductName).Column("ProductName");
             Map(x => x.QuantityPerUnit).Column("QuantityPerUnit");
             Map(x => x.UnitPrice).Column("UnitPrice");

@@ -25,10 +25,10 @@ namespace DevFramework.Northwind.DataAccess.Concrete.NHibernate
             {
                 var result = from p in session.Query<Product>()
                              join c in session.Query<Category>()
-                             on p.CategoryID equals c.CategoryID
+                             on p.CategoryId equals c.CategoryID
                              select new ProductDetail
                              {
-                                 ProductId = p.ProductID,
+                                 ProductId = p.ProductId,
                                  ProductName = p.ProductName,
                                  CategoryName = c.CategoryName
                              };

@@ -9,7 +9,7 @@ using Moq;
 namespace DevFramework.Northwind.Business.Test
 {
     [TestClass]
-    public class ProductManagerTest
+    public class ProductManagerTests
     {
         [ExpectedException(typeof(ValidationException))]
         [TestMethod]
@@ -17,6 +17,7 @@ namespace DevFramework.Northwind.Business.Test
         {
             Mock<IProductDal> mock = new Mock<IProductDal>();
             ProductManager productManager = new ProductManager(mock.Object);
+
             productManager.Add(new Product());
         }
     }
