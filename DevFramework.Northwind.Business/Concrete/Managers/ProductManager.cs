@@ -1,12 +1,14 @@
-﻿using DevFramework.Core.Aspects.Postsharp;
+﻿
+using DevFramework.Core.Aspects.Postsharp.CacheAspects;
+using DevFramework.Core.Aspects.Postsharp.TransactionAspects;
+using DevFramework.Core.Aspects.Postsharp.ValidationAspects;
+using DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft;
 using DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using DevFramework.Northwind.Business.Abstract;
 using DevFramework.Northwind.Business.ValidationRules.FluentValidation;
 using DevFramework.Northwind.DataAccess.Abstract;
 using DevFramework.Northwind.Entities.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DevFramework.Northwind.Business.Concrete.Managers
 {
@@ -17,17 +19,19 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
         {
             _productDal = productDal;
         }
-
+        [CacheAspect(typeof(MemoryCacheManager),60)]
         public List<Product> GetAll()
         {
             return _productDal.GetList();
         }
+        
         public Product GetById(int id)
         {
-            return _productDal.Get(p=>p.ProductId == id);
+            return _productDal.Get(p => p.ProductId == id);
         }
 
         [FluentValidationAspect(typeof(ProductValidatior))]
+        [CacheRemoveAspect(typeof(MemoryCacheManager))]
         public Product Add(Product product)
         {
             ValidatorTool.FluentValidate(new ProductValidatior(), product);
@@ -38,6 +42,16 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
         public Product Update(Product product)
         {
             return _productDal.Update(product);
+        }
+
+
+        [TransactionScopeAspect]
+        public void TransactionalOperation(Product product1, Product product2)
+        {
+            _productDal.Add(product1);
+            //business code
+            _productDal.Update(product2);
+
         }
     }
 }
