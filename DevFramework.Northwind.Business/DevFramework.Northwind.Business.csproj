@@ -9,7 +9,7 @@
     <PackageReference Include="FluentValidation" Version="6.4.1" />
     <PackageReference Include="Ninject" Version="3.2.2" />
     <PackageReference Include="PostSharp" Version="4.2.17" />
-    <PackageReference Include="PostSharp.Redist" Version="5.0.27" />
+    <PackageReference Include="PostSharp.Redist" Version="5.0.24-preview" />
   </ItemGroup>
 
   <ItemGroup>

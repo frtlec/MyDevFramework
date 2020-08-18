@@ -14,9 +14,9 @@ namespace DevFramework.Northwind.MvcWebUI2.Controllers
     {
         public ActionResult Index()
         {
-            Mock<IProductDal> mock = new Mock<IProductDal>();
-            ProductManager productManager = new ProductManager(mock.Object);
-            productManager.Add(new Product());
+            //Mock<IProductDal> mock = new Mock<IProductDal>();
+            //ProductManager productManager = new ProductManager(mock.Object);
+            //productManager.Add(new Product());
             return View();
         }
 

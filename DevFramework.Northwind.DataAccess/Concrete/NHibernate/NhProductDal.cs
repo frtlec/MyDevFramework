@@ -18,6 +18,11 @@ namespace DevFramework.Northwind.DataAccess.Concrete.NHibernate
             _nHibernateHelper = nHibernateHelper;
         }
 
+        public List<Product> GetAlll()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<ProductDetail> GetProductDetails()
         {
 
