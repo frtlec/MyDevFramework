@@ -22,8 +22,6 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
             _productDal = productDal;
         }
         [CacheAspect(typeof(MemoryCacheManager))]
-        [LogAspect(typeof(DatabaseLogger))]
-        [LogAspect(typeof(FileLogger))]
         public List<Product> GetAll()
         {
             return _productDal.GetList();
@@ -37,6 +35,7 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
 
         [FluentValidationAspect(typeof(ProductValidatior))]
         [CacheRemoveAspect(typeof(MemoryCacheManager))]
+       
         public Product Add(Product product)
         {
             ValidatorTool.FluentValidate(new ProductValidatior(), product);
@@ -51,6 +50,7 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
 
 
         [TransactionScopeAspect]
+        [FluentValidationAspect(typeof(ProductValidatior))]
         public void TransactionalOperation(Product product1, Product product2)
         {
             _productDal.Add(product1);

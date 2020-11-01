@@ -13,9 +13,8 @@ namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework.Mappings
         public ProductMap()
         {
             ToTable(@"Products", @"dbo");
-            HasKey(x => x.CategoryId);
-
-            Property(x => x.CategoryId).HasColumnName("ProductId");
+            HasKey(x => x.ProductId);
+            Property(x => x.ProductId).HasColumnName("ProductId");
             Property(x => x.CategoryId).HasColumnName("CategoryID");
             Property(x => x.ProductName).HasColumnName("ProductName");
             Property(x => x.QuantityPerUnit).HasColumnName("QuantityPerUnit");

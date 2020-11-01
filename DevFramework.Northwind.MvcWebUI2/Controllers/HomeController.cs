@@ -1,9 +1,12 @@
 ﻿using DevFramework.Northwind.Business.Concrete.Managers;
 using DevFramework.Northwind.DataAccess.Abstract;
+using DevFramework.Northwind.DataAccess.Concrete.EntityFramework;
 using DevFramework.Northwind.Entities.Concrete;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -17,6 +20,8 @@ namespace DevFramework.Northwind.MvcWebUI2.Controllers
             //Mock<IProductDal> mock = new Mock<IProductDal>();
             //ProductManager productManager = new ProductManager(mock.Object);
             //productManager.Add(new Product());
+          
+           
             return View();
         }
 
