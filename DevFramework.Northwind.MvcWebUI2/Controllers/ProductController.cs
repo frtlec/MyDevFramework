@@ -53,7 +53,7 @@ namespace DevFramework.Northwind.MvcWebUI2.Controllers
                 CategoryId = 1,
                 ProductName = "new1",
                 QuantityPerUnit = "323",
-                UnitPrice = 11,
+                UnitPrice = 2,
                 Discontinued = true
             }, new Product
             {
@@ -61,7 +61,7 @@ namespace DevFramework.Northwind.MvcWebUI2.Controllers
                 CategoryId = 1,
                 ProductName = "update1",
                 QuantityPerUnit = "1",
-                UnitPrice = 30,
+                UnitPrice = 21,
                 Discontinued = true
             });
             return "done";
