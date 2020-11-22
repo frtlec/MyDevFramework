@@ -1,4 +1,5 @@
 ﻿
+using AutoMapper;
 using DevFramework.Core.Aspects.Postsharp.AuthorizationAspects;
 using DevFramework.Core.Aspects.Postsharp.CacheAspects;
 using DevFramework.Core.Aspects.Postsharp.ExceptionAspects;
@@ -9,11 +10,13 @@ using DevFramework.Core.Aspects.Postsharp.ValidationAspects;
 using DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft;
 using DevFramework.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 using DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
+using DevFramework.Core.Utilities.Mappings;
 using DevFramework.Northwind.Business.Abstract;
 using DevFramework.Northwind.Business.ValidationRules.FluentValidation;
 using DevFramework.Northwind.DataAccess.Abstract;
 using DevFramework.Northwind.Entities.Concrete;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 
 namespace DevFramework.Northwind.Business.Concrete.Managers
@@ -21,17 +24,19 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
     public class ProductManager : IProductService
     {
         private IProductDal _productDal;
-        public ProductManager(IProductDal productDal)
+        private readonly IMapper _mapper;
+        public ProductManager(IProductDal productDal,IMapper mapper)
         {
             _productDal = productDal;
+            _mapper = mapper;
         }
         [CacheAspect(typeof(MemoryCacheManager))]
         [PerformanceCounterAspect(2)]
-        [SecuredOperation(Roles="Admin,Editör")]
+        [SecuredOperation(Roles="Admin,Editor,Student")]
         public List<Product> GetAll()
         {
-            Thread.Sleep(3000);
-            return _productDal.GetList();
+            var products = _mapper.Map<List<Product>>(_productDal.GetList());
+            return products;
         }
 
 
